@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guía Fortaleza Oscura AI</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+</head>
+<body>
+
+<h1>Guía Fortaleza Oscura AI</h1>
+
+<label>Tipo de jugador:</label>
+<select id="player">
+  <option value="f2p">F2P</option>
+  <option value="p2p">P2P</option>
+</select>
+
+<label>Sube captura de fortaleza:</label>
+<input type="file" id="fortalezaImg" accept="image/*">
+<button onclick="procesarFortaleza()">Analizar fortaleza</button>
+
+<label>Sube captura de tu armadura:</label>
+<input type="file" id="armaduraImg" accept="image/*">
+<button onclick="procesarArmadura()">Analizar armadura</button>
+
+<label>Tipo de tropas:</label>
+<select id="tropas">
+  <option value="t4">T4</option>
+  <option value="t5">T5</option>
+</select>
+
+<button onclick="calcular()">Calcular Ataque</button>
+<div id="resultado"></div>
+
+<script src="data/heroes.js"></script>
+<script src="data/nests.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
